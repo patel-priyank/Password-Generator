@@ -42,6 +42,7 @@ button {
   box-shadow: 0 0.25rem rgba(121, 121, 121, 0.65);
   transition: 0.15s;
   margin-top: 0.5em;
+  width: 150px;
 }
 
 button:hover {
@@ -111,39 +112,6 @@ h1 {
   height: 2em;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: springgreen;
-  color: black;
-  border: 1px solid green;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  bottom: 75%;
-  left: 50%;
-  margin-left: -60px;
-  z-index: 1;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: green transparent transparent transparent;
-}
-
 /* Media Query: Tablet or smaller */
 @media screen and (max-width: 1000px) {
   h1 {
@@ -171,10 +139,6 @@ h1 {
   .password-text {
     height: 4em;
   }
-
-  .tooltip .tooltiptext {
-    bottom: 82.5%;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -192,15 +156,5 @@ h1 {
   .password-text {
     color: white;
     background-color: #2d2d2db3;
-  }
-
-  .tooltip .tooltiptext {
-    background-color: green;
-    color: white;
-    border: 1px solid springgreen;
-  }
-
-  .tooltip .tooltiptext::after {
-    border-color: springgreen transparent transparent transparent;
   }
 }

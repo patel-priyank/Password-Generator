@@ -82,14 +82,21 @@ const copyPassword = () => {
 
   passwordText.disabled = true;
 
-  document.querySelector('#tooltiptext').style.visibility = 'visible';
-  generateBtn.disabled = true;
-  copyBtn.disabled = true;
+  copyBtn.innerHTML = 'Copied!';
+  
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // dark mode
+    copyBtn.style.background = 'green';
+    copyBtn.style.color = 'white';
+  } else {
+    copyBtn.style.background = 'springgreen';
+    copyBtn.style.color = 'black';
+  }
 
   setTimeout(() => {
-    document.querySelector('#tooltiptext').style.visibility = 'hidden';
-    generateBtn.disabled = false;
-    copyBtn.disabled = false;
+    copyBtn.innerHTML = 'Copy';
+    copyBtn.style.background = '#333';
+    copyBtn.style.color = 'white';
   }, 1000);
 };
 

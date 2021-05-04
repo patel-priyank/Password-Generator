@@ -16,7 +16,7 @@
         <div class="password-setting">
           <div class="setting-name"><span>Password Length</span></div>
           <div class="setting-control">
-            <select class="password-length" id="password-length">
+            <select class="password-length" id="password-length" onchange="generatePassword()">
               <option value="6">6</option>
               <option value="7">7</option>
               <option value="8">8</option>
@@ -51,7 +51,7 @@
         <div class="password-setting">
           <div class="setting-name">Symbols</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-symbols" checked />
+            <input type="checkbox" id="check-symbols" onchange="generatePassword()" checked />
             <label for="check-symbols"> @#$%^& </label>
           </div>
         </div>
@@ -59,7 +59,7 @@
         <div class="password-setting">
           <div class="setting-name">Numbers</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-numbers" checked />
+            <input type="checkbox" id="check-numbers" onchange="generatePassword()" checked />
             <label for="check-numbers"> 012345 </label>
           </div>
         </div>
@@ -67,7 +67,7 @@
         <div class="password-setting">
           <div class="setting-name">Lowercase characters</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-lowercase" checked />
+            <input type="checkbox" id="check-lowercase" onchange="generatePassword()" checked />
             <label for="check-lowercase"> abcdef </label>
           </div>
         </div>
@@ -75,7 +75,7 @@
         <div class="password-setting">
           <div class="setting-name">Uppercase characters</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-uppercase" checked />
+            <input type="checkbox" id="check-uppercase" onchange="generatePassword()" checked />
             <label for="check-uppercase"> ABCDEF </label>
           </div>
         </div>
@@ -83,7 +83,7 @@
         <div class="password-setting">
           <div class="setting-name">Include similar characters</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-similar" />
+            <input type="checkbox" id="check-similar" onchange="generatePassword()" />
             <label for="check-similar"> 01ilIO </label>
           </div>
         </div>
@@ -94,9 +94,8 @@
         <button type="button" class="copy-btn" id="copy-btn">Copy</button>
       </div>
 
-      <div class="password-area tooltip">
+      <div class="password-area">
         <textarea type="text" class="password-text" id="password-text" wrap="hard" disabled></textarea>
-        <span class="tooltiptext" id="tooltiptext">Copied!</span>
       </div>
     </div>
 
