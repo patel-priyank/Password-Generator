@@ -25,7 +25,7 @@ const generatePassword = () => {
     password += generateRandomCharacter();
   }
 
-  passwordText.value = password;
+  passwordText.value = password === '' ? 'Select something!' : password;
 };
 
 const generateRandomCharacter = () => {
@@ -63,7 +63,7 @@ const generateRandomCharacter = () => {
     }
   }
 
-  return pwdString[Math.floor(Math.random() * pwdString.length)];
+  return pwdString === '' ? '' : pwdString[Math.floor(Math.random() * pwdString.length)];
 };
 
 const copyPassword = () => {
@@ -83,7 +83,7 @@ const copyPassword = () => {
   passwordText.disabled = true;
 
   copyBtn.innerHTML = 'Copied!';
-  
+
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     // dark mode
     copyBtn.style.background = 'green';
