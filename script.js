@@ -25,7 +25,23 @@ const generatePassword = () => {
     password += generateRandomCharacter();
   }
 
-  passwordText.value = password === '' ? 'Select something!' : password;
+  if (password === '') {
+    passwordText.value = 'Select something!';
+    disableButtons();
+  } else {
+    passwordText.value = password;
+    enableButtons();
+  }
+};
+
+const disableButtons = () => {
+  generateBtn.disabled = true;
+  copyBtn.disabled = true;
+};
+
+const enableButtons = () => {
+  generateBtn.disabled = false;
+  copyBtn.disabled = false;
 };
 
 const generateRandomCharacter = () => {
