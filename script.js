@@ -14,7 +14,6 @@ const colorGreenLight = '#00ff7f';
 const colorGreenDark = '#008000';
 const colorWhite = '#ffffff';
 const colorBlack = '#000000';
-const colorGrey = '#333333';
 
 generateBtn.addEventListener('click', () => {
   generatePassword();
@@ -117,8 +116,8 @@ const copyPassword = () => {
 
   setTimeout(() => {
     copyBtn.innerHTML = 'Copy';
-    copyBtn.style.background = colorGrey;
-    copyBtn.style.color = colorWhite;
+    copyBtn.style.background = '';
+    copyBtn.style.color = '';
   }, 1000);
 };
 
