@@ -10,6 +10,12 @@ const passwordText = document.querySelector('#password-text');
 const generateBtn = document.querySelector('#generate-btn');
 const copyBtn = document.querySelector('#copy-btn');
 
+const colorGreenLight = '#00ff7f';
+const colorGreenDark = '#008000';
+const colorWhite = '#ffffff';
+const colorBlack = '#000000';
+const colorGrey = '#333333';
+
 generateBtn.addEventListener('click', () => {
   generatePassword();
 });
@@ -102,17 +108,17 @@ const copyPassword = () => {
 
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     // dark mode
-    copyBtn.style.background = 'green';
-    copyBtn.style.color = 'white';
+    copyBtn.style.background = colorGreenDark;
+    copyBtn.style.color = colorWhite;
   } else {
-    copyBtn.style.background = 'springgreen';
-    copyBtn.style.color = 'black';
+    copyBtn.style.background = colorGreenLight;
+    copyBtn.style.color = colorBlack;
   }
 
   setTimeout(() => {
     copyBtn.innerHTML = 'Copy';
-    copyBtn.style.background = '#333';
-    copyBtn.style.color = 'white';
+    copyBtn.style.background = colorGrey;
+    copyBtn.style.color = colorWhite;
   }, 1000);
 };
 
