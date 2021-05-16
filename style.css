@@ -6,9 +6,9 @@ html {
 
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-  color: #000000;
+  color: rgb(0, 0, 0);
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-align: center;
@@ -22,8 +22,8 @@ body {
   max-width: 900px;
   padding: 20px 30px;
   border-radius: 10px;
-  background-color: #ffffffbf;
-  box-shadow: 0 10px 10px 10px #00000040;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.25);
   transition: 0.15s;
   padding-bottom: 45px;
   margin: 2rem auto;
@@ -35,11 +35,11 @@ button {
   height: 2.5rem;
   border: none;
   border-radius: 10px;
-  color: #ffffff;
-  background-color: #333333;
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
   outline: none;
   padding: 0.5rem 1.75rem;
-  box-shadow: 0 0.25rem #797979a6;
+  box-shadow: 0 0.25rem rgba(121, 121, 121, 0.65);
   transition: 0.15s;
   margin: 0.5em 0.25em auto 0.25em;
   width: 150px;
@@ -47,7 +47,7 @@ button {
 
 button:disabled {
   cursor: not-allowed;
-  background-color: #1f1f1fa6;
+  background-color: rgba(31, 31, 31, 0.65);
 }
 
 button:not(:disabled):hover {
@@ -56,7 +56,7 @@ button:not(:disabled):hover {
 
 button:active {
   transform: translate(0, 0.3rem);
-  box-shadow: 0 0.1rem #ffffffa6;
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
 h1 {
@@ -109,11 +109,11 @@ h1 {
   border-radius: 5px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: #000000;
+  color: rgb(0, 0, 0);
   text-align: center;
   width: 80%;
   font-family: 'Courier New', Courier, monospace;
-  background-color: #d2d2d2bf;
+  background-color: rgba(210, 210, 210, 0.75);
   height: 2em;
 }
 
@@ -148,18 +148,18 @@ h1 {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #212121;
+    background-color: rgb(33, 33, 33);
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-    color: #ffffff;
+    color: rgb(255, 255, 255);
   }
 
   .password-container {
-    background-color: #000000bf;
-    box-shadow: 0 10px 10px 10px #32323240;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 10px 10px 10px rgba(50, 50, 50, 0.25);
   }
 
   .password-text {
-    color: #ffffff;
-    background-color: #2d2d2db3;
+    color: rgb(255, 255, 255);
+    background-color: rgba(45, 45, 45, 0.7);
   }
 }

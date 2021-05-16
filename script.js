@@ -10,10 +10,10 @@ const passwordText = document.querySelector('#password-text');
 const generateBtn = document.querySelector('#generate-btn');
 const copyBtn = document.querySelector('#copy-btn');
 
-const colorGreenLight = '#00ff7f';
-const colorGreenDark = '#008000';
-const colorWhite = '#ffffff';
-const colorBlack = '#000000';
+const colorGreenLight = 'rgb(0, 255, 128)';
+const colorGreenDark = 'rgb(0, 128, 0)';
+const colorWhite = 'rgb(255, 255, 255)';
+const colorBlack = 'rgb(0, 0, 0)';
 
 generateBtn.addEventListener('click', () => {
   generatePassword();
