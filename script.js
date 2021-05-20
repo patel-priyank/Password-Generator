@@ -11,10 +11,10 @@ const generateBtn = document.querySelector('#generate-btn');
 const copyBtn = document.querySelector('#copy-btn');
 const githubBtn = document.querySelector('#github-btn');
 
-const colorGreenLight = 'rgb(0, 255, 128)';
-const colorGreenDark = 'rgb(0, 128, 0)';
-const colorWhite = 'rgb(255, 255, 255)';
-const colorBlack = 'rgb(0, 0, 0)';
+const colorGreenLight = 'springgreen';
+const colorGreenDark = 'green';
+const colorWhite = 'white';
+const colorBlack = 'black';
 
 const symbols = '@#$%^&*(){}[]<>?';
 const similarSymbols = '!:;,./\\';
