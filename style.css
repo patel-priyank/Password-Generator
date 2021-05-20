@@ -231,4 +231,8 @@ h1 {
   transform: rotate(45deg);
 }
 
+input:focus + .checkmark {
+  outline: 1px solid whitesmoke;
+}
+
 /*#endregion */

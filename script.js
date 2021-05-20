@@ -121,4 +121,12 @@ const copyPassword = () => {
   }, 1000);
 };
 
+document.querySelectorAll('.checkbox-container').forEach((checkbox) => {
+  checkbox.addEventListener('click', (event) => {
+    if (!(event.screenX === 0 && event.screenY === 0)) {
+      document.activeElement.blur();
+    }
+  });
+});
+
 generatePassword();
