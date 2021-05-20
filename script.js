@@ -9,6 +9,7 @@ const passwordText = document.querySelector('#password-text');
 
 const generateBtn = document.querySelector('#generate-btn');
 const copyBtn = document.querySelector('#copy-btn');
+const githubBtn = document.querySelector('#github-btn');
 
 const colorGreenLight = 'rgb(0, 255, 128)';
 const colorGreenDark = 'rgb(0, 128, 0)';
@@ -21,6 +22,10 @@ generateBtn.addEventListener('click', () => {
 
 copyBtn.addEventListener('click', () => {
   copyPassword();
+});
+
+githubBtn.addEventListener('click', () => {
+  window.open('https://github.com/patel-priyank/Password-Generator');
 });
 
 const generatePassword = () => {
