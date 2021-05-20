@@ -46,7 +46,7 @@ button {
 }
 
 button:focus {
-  box-shadow: 0 0.25rem rgba(121, 121, 121, 0.65), inset 0px 0px 0px 1px whitesmoke;
+  box-shadow: 0 0.25rem rgba(121, 121, 121, 0.65), inset 0px 0px 5px 1px whitesmoke;
 }
 
 button:disabled {
@@ -120,53 +120,6 @@ h1 {
   height: 2em;
 }
 
-/* Media Query: Tablet or smaller */
-@media screen and (max-width: 1000px) {
-  h1 {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-  }
-
-  .password-container {
-    margin: 10px 10px;
-  }
-
-  .password-length {
-    width: 50%;
-    margin-left: 2%;
-  }
-
-  .setting-name {
-    padding-right: 2%;
-  }
-
-  .setting-control {
-    padding-left: 2%;
-  }
-
-  .password-text {
-    height: 4em;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #212121;
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-    color: white;
-  }
-
-  .password-container {
-    background-color: rgba(0, 0, 0, 0.75);
-    box-shadow: 0 10px 10px 10px rgba(50, 50, 50, 0.25);
-  }
-
-  .password-text {
-    color: white;
-    background-color: #2d2d2db3;
-  }
-}
-
 /*#region custom checkbox/checkmark */
 
 /* customize the label */
@@ -236,7 +189,58 @@ h1 {
 }
 
 input:focus + .checkmark {
-  outline: 1px solid whitesmoke;
+  outline: 1px solid black;
 }
 
 /*#endregion */
+
+/* Media Query: Tablet or smaller */
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .password-container {
+    margin: 10px 10px;
+  }
+
+  .password-length {
+    width: 50%;
+    margin-left: 2%;
+  }
+
+  .setting-name {
+    padding-right: 2%;
+  }
+
+  .setting-control {
+    padding-left: 2%;
+  }
+
+  .password-text {
+    height: 4em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #212121;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    color: white;
+  }
+
+  .password-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 10px 10px 10px rgba(50, 50, 50, 0.25);
+  }
+
+  .password-text {
+    color: white;
+    background-color: #2d2d2db3;
+  }
+
+  input:focus + .checkmark {
+    outline: 1px solid whitesmoke;
+  }
+}
