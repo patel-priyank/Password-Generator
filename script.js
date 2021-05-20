@@ -16,6 +16,15 @@ const colorGreenDark = 'rgb(0, 128, 0)';
 const colorWhite = 'rgb(255, 255, 255)';
 const colorBlack = 'rgb(0, 0, 0)';
 
+const symbols = '@#$%^&*(){}[]<>?';
+const similarSymbols = '!:;,./\\';
+const numbers = '23456789';
+const similarNumbers = '01';
+const lowercaseCharacters = 'abcdefghjkmnopqrstuvwxyz';
+const similarLowercaseCharacters = 'il';
+const uppercaseCharacters = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
+const similarUppercaseCharacters = 'IO';
+
 generateBtn.addEventListener('click', () => {
   generatePassword();
 });
@@ -40,10 +49,103 @@ const generatePassword = () => {
     passwordText.style.letterSpacing = 'unset';
     disableButtons();
   } else {
-    passwordText.value = password;
-    passwordText.style.letterSpacing = '0.25em';
-    enableButtons();
+    var conditionsValid = checkAllConditions(password);
+
+    if (conditionsValid) {
+      passwordText.value = password;
+      passwordText.style.letterSpacing = '0.25em';
+      enableButtons();
+    } else {
+      generatePassword();
+    }
   }
+};
+
+const checkAllConditions = (password) => {
+  var conditionExists = false;
+  var checkConditions = '';
+
+  if (checkSymbols.checked) {
+    conditionExists = false;
+    checkConditions = symbols;
+
+    if (checkSimilar.checked) {
+      checkConditions += similarSymbols;
+    }
+
+    for (var condition of checkConditions) {
+      if (password.includes(condition)) {
+        conditionExists = true;
+        break;
+      }
+    }
+
+    if (!conditionExists) {
+      return false;
+    }
+  }
+
+  if (checkNumbers.checked) {
+    conditionExists = false;
+    checkConditions = numbers;
+
+    if (checkSimilar.checked) {
+      checkConditions += similarNumbers;
+    }
+
+    for (var condition of checkConditions) {
+      if (password.includes(condition)) {
+        conditionExists = true;
+        break;
+      }
+    }
+
+    if (!conditionExists) {
+      return false;
+    }
+  }
+
+  if (checkLowercase.checked) {
+    conditionExists = false;
+    checkConditions = lowercaseCharacters;
+
+    if (checkSimilar.checked) {
+      checkConditions += similarLowercaseCharacters;
+    }
+
+    for (var condition of checkConditions) {
+      if (password.includes(condition)) {
+        conditionExists = true;
+        break;
+      }
+    }
+
+    if (!conditionExists) {
+      return false;
+    }
+  }
+
+  if (checkUppercase.checked) {
+    conditionExists = false;
+    checkConditions = uppercaseCharacters;
+
+    if (checkSimilar.checked) {
+      checkConditions += similarUppercaseCharacters;
+    }
+
+    for (var condition of checkConditions) {
+      if (password.includes(condition)) {
+        conditionExists = true;
+        break;
+      }
+    }
+
+    if (!conditionExists) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 const disableButtons = () => {
@@ -60,34 +162,34 @@ const generateRandomCharacter = () => {
   var pwdString = '';
 
   if (checkSymbols.checked) {
-    pwdString += '@#$%^&*(){}[]<>?';
+    pwdString += symbols;
 
     if (checkSimilar.checked) {
-      pwdString += '!:;,./\\';
+      pwdString += similarSymbols;
     }
   }
 
   if (checkNumbers.checked) {
-    pwdString += '23456789';
+    pwdString += numbers;
 
     if (checkSimilar.checked) {
-      pwdString += '01';
+      pwdString += similarNumbers;
     }
   }
 
   if (checkLowercase.checked) {
-    pwdString += 'abcdefghjkmnopqrstuvwxyz';
+    pwdString += lowercaseCharacters;
 
     if (checkSimilar.checked) {
-      pwdString += 'il';
+      pwdString += similarLowercaseCharacters;
     }
   }
 
   if (checkUppercase.checked) {
-    pwdString += 'ABCDEFGHJKLMNPQRSTUVWXYZ';
+    pwdString += uppercaseCharacters;
 
     if (checkSimilar.checked) {
-      pwdString += 'IO';
+      pwdString += similarUppercaseCharacters;
     }
   }
 
