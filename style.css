@@ -76,7 +76,7 @@ h1 {
 .setting-name {
   text-align: right;
   width: 45%;
-  padding-right: 0.5%;
+  padding-right: 1%;
   align-self: center;
   font-weight: normal;
 }
@@ -84,7 +84,7 @@ h1 {
 .setting-control {
   text-align: left;
   width: 45%;
-  padding-left: 0.5%;
+  padding-left: 1%;
   align-self: center;
   font-weight: normal;
 }
@@ -101,7 +101,6 @@ h1 {
 
 .password-length {
   width: 25%;
-  margin-left: 1%;
 }
 
 .password-text {
@@ -134,11 +133,11 @@ h1 {
   }
 
   .setting-name {
-    padding-right: 1%;
+    padding-right: 2%;
   }
 
   .setting-control {
-    padding-left: 1%;
+    padding-left: 2%;
   }
 
   .password-text {
@@ -163,3 +162,73 @@ h1 {
     background-color: #2d2d2db3;
   }
 }
+
+/*#region custom checkbox/checkmark */
+
+/* customize the label */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 28.875px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: fit-content;
+}
+
+/* hide the default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 23.125px;
+  width: 23.125px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #4f4f4f;
+  -moz-box-shadow: inset 0px 0px 0px 1px #4f4f4f;
+  box-shadow: inset 0px 0px 0px 1px #4f4f4f;
+}
+
+/* when the checkbox is checked, add background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #ffd105;
+}
+
+/* create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* style the checkmark */
+.checkbox-container .checkmark:after {
+  left: 7.5px;
+  top: 4.4px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*#endregion */

@@ -51,40 +51,55 @@
         <div class="password-setting">
           <div class="setting-name">Symbols</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-symbols" onchange="generatePassword()" checked />
-            <label for="check-symbols"> @#$%^& </label>
+            <label class="checkbox-container">
+              <span>@#$%^&</span>
+              <input type="checkbox" id="check-symbols" onchange="generatePassword()" checked />
+              <span class="checkmark"></span>
+            </label>
           </div>
         </div>
 
         <div class="password-setting">
           <div class="setting-name">Numbers</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-numbers" onchange="generatePassword()" checked />
-            <label for="check-numbers"> 012345 </label>
+            <label class="checkbox-container">
+              <span>012345</span>
+              <input type="checkbox" id="check-numbers" onchange="generatePassword()" checked />
+              <span class="checkmark"></span>
+            </label>
           </div>
         </div>
 
         <div class="password-setting">
           <div class="setting-name">Lowercase characters</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-lowercase" onchange="generatePassword()" checked />
-            <label for="check-lowercase"> abcdef </label>
+            <label class="checkbox-container">
+              <span>abcdef</span>
+              <input type="checkbox" id="check-lowercase" onchange="generatePassword()" checked />
+              <span class="checkmark"></span>
+            </label>
           </div>
         </div>
 
         <div class="password-setting">
           <div class="setting-name">Uppercase characters</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-uppercase" onchange="generatePassword()" checked />
-            <label for="check-uppercase"> ABCDEF </label>
+            <label class="checkbox-container">
+              <span>ABCDEF</span>
+              <input type="checkbox" id="check-uppercase" onchange="generatePassword()" checked />
+              <span class="checkmark"></span>
+            </label>
           </div>
         </div>
 
         <div class="password-setting">
           <div class="setting-name">Include similar characters</div>
           <div class="setting-control">
-            <input type="checkbox" id="check-similar" onchange="generatePassword()" />
-            <label for="check-similar"> 01ilIO </label>
+            <label class="checkbox-container">
+              <span>01ilIO</span>
+              <input type="checkbox" id="check-similar" onchange="generatePassword()" />
+              <span class="checkmark"></span>
+            </label>
           </div>
         </div>
       </div>
