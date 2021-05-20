@@ -32,9 +32,11 @@ const generatePassword = () => {
 
   if (password === '') {
     passwordText.value = 'Select something!';
+    passwordText.style.letterSpacing = 'unset';
     disableButtons();
   } else {
     passwordText.value = password;
+    passwordText.style.letterSpacing = '0.25em';
     enableButtons();
   }
 };
