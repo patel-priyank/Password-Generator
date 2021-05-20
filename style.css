@@ -45,6 +45,10 @@ button {
   width: 150px;
 }
 
+button:focus {
+  box-shadow: 0 0.25rem rgba(121, 121, 121, 0.65), inset 0px 0px 0px 1px whitesmoke;
+}
+
 button:disabled {
   cursor: not-allowed;
   background-color: rgb(31, 31, 31, 0.65);

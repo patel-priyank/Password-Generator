@@ -101,6 +101,8 @@ const copyPassword = () => {
     document.selection.empty();
   }
 
+  copyBtn.focus();
+
   passwordText.disabled = true;
 
   copyBtn.innerHTML = 'Copied!';
@@ -123,10 +125,20 @@ const copyPassword = () => {
 
 document.querySelectorAll('.checkbox-container').forEach((checkbox) => {
   checkbox.addEventListener('click', (event) => {
-    if (!(event.screenX === 0 && event.screenY === 0)) {
-      document.activeElement.blur();
-    }
+    blurOnMouseClick(event);
   });
 });
+
+document.querySelectorAll('button').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    blurOnMouseClick(event);
+  });
+});
+
+const blurOnMouseClick = (event) => {
+  if (!(event.screenX === 0 && event.screenY === 0)) {
+    document.activeElement.blur();
+  }
+};
 
 generatePassword();
