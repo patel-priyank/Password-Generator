@@ -105,20 +105,21 @@ h1 {
 }
 
 .password-length {
-  width: 35%;
+  width: 6rem;
 }
 
 .password-text {
   resize: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.25em;
   color: black;
   text-align: center;
   width: 80%;
   font-family: 'Courier New', Courier, monospace;
   background-color: #d2d2d2bf;
-  height: 2em;
+  height: 3.5em;
 }
 
 select {
@@ -215,10 +216,6 @@ input:focus + .checkmark {
     margin: 10px 10px;
   }
 
-  .password-length {
-    width: 50%;
-  }
-
   .setting-name {
     padding-right: 2%;
   }
@@ -228,7 +225,7 @@ input:focus + .checkmark {
   }
 
   .password-text {
-    height: 4em;
+    height: 7em;
   }
 }
 
