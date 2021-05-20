@@ -69,6 +69,7 @@ h1 {
   margin-bottom: 15px;
   font-size: 3.5rem;
   letter-spacing: 5px;
+  text-shadow: 1px 1px 5px rgba(255, 255, 0, 0.75);
 }
 
 .password-setting {
@@ -120,7 +121,7 @@ h1 {
   height: 2em;
 }
 
-/*#region custom checkbox/checkmark */
+/*#region Custom checkbox/checkmark */
 
 /* customize the label */
 .checkbox-container {
