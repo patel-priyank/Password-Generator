@@ -174,12 +174,13 @@ select {
 /* create a custom checkbox */
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   height: 23.125px;
   width: 23.125px;
   background-color: white;
   border-radius: 5px;
+  transform: translateY(-50%);
   -webkit-box-shadow: inset 0px 0px 0px 1px #4f4f4f;
   -moz-box-shadow: inset 0px 0px 0px 1px #4f4f4f;
   box-shadow: inset 0px 0px 0px 1px #4f4f4f;
