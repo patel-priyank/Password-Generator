@@ -4,6 +4,7 @@ const checkNumbers = document.querySelector('#check-numbers');
 const checkLowercase = document.querySelector('#check-lowercase');
 const checkUppercase = document.querySelector('#check-uppercase');
 const checkSimilar = document.querySelector('#check-similar');
+const checkSavePreferences = document.querySelector('#check-save-preferences');
 
 const passwordText = document.querySelector('#password-text');
 
@@ -38,6 +39,8 @@ githubBtn.addEventListener('click', () => {
 });
 
 const generatePassword = () => {
+  savePreferences();
+
   var password = '';
 
   for (let i = 0; i < passwordLength.value; ++i) {
@@ -232,6 +235,64 @@ const copyPassword = () => {
   }, 1000);
 };
 
+const getPreferences = () => {
+  if (!isNullOrUndefined(localStorage.getItem('passwordLength'))) {
+    passwordLength.value = localStorage.getItem('passwordLength');
+  }
+
+  if (!isNullOrUndefined(localStorage.getItem('checkSymbols'))) {
+    checkSymbols.checked = isTrue(localStorage.getItem('checkSymbols'));
+  }
+
+  if (!isNullOrUndefined(localStorage.getItem('checkNumbers'))) {
+    checkNumbers.checked = isTrue(localStorage.getItem('checkNumbers'));
+  }
+
+  if (!isNullOrUndefined(localStorage.getItem('checkLowercase'))) {
+    checkLowercase.checked = isTrue(localStorage.getItem('checkLowercase'));
+  }
+
+  if (!isNullOrUndefined(localStorage.getItem('checkUppercase'))) {
+    checkUppercase.checked = isTrue(localStorage.getItem('checkUppercase'));
+  }
+
+  if (!isNullOrUndefined(localStorage.getItem('checkSimilar'))) {
+    checkSimilar.checked = isTrue(localStorage.getItem('checkSimilar'));
+  }
+
+  if (!isNullOrUndefined(localStorage.getItem('checkSavePreferences'))) {
+    checkSavePreferences.checked = isTrue(localStorage.getItem('checkSavePreferences'));
+  }
+};
+
+const savePreferences = () => {
+  if (checkSavePreferences.checked) {
+    localStorage.setItem('passwordLength', passwordLength.value);
+    localStorage.setItem('checkSymbols', checkSymbols.checked);
+    localStorage.setItem('checkNumbers', checkNumbers.checked);
+    localStorage.setItem('checkLowercase', checkLowercase.checked);
+    localStorage.setItem('checkUppercase', checkUppercase.checked);
+    localStorage.setItem('checkSimilar', checkSimilar.checked);
+    localStorage.setItem('checkSavePreferences', checkSavePreferences.checked);
+  } else {
+    localStorage.removeItem('passwordLength');
+    localStorage.removeItem('checkSymbols');
+    localStorage.removeItem('checkNumbers');
+    localStorage.removeItem('checkLowercase');
+    localStorage.removeItem('checkUppercase');
+    localStorage.removeItem('checkSimilar');
+    localStorage.removeItem('checkSavePreferences');
+  }
+};
+
+const isNullOrUndefined = (item) => {
+  return item === null || item === undefined;
+};
+
+const isTrue = (item) => {
+  return item === 'true';
+};
+
 document.querySelectorAll('.checkbox-container').forEach((checkbox) => {
   checkbox.addEventListener('click', (event) => {
     blurOnMouseClick(event);
@@ -250,4 +311,5 @@ const blurOnMouseClick = (event) => {
   }
 };
 
+getPreferences();
 generatePassword();

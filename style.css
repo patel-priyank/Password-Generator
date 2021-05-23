@@ -140,6 +140,13 @@ select {
   cursor: pointer;
 }
 
+.hr {
+  background-color: hsl(0, 0%, 85%);
+  height: 1px;
+  width: 100%;
+  margin: 0.625rem 0;
+}
+
 /*#region Custom checkbox/checkmark */
 
 /* customize the label */
@@ -261,5 +268,9 @@ input:focus + .checkmark {
 
   input:focus + .checkmark {
     outline: 1px solid whitesmoke;
+  }
+
+  .hr {
+    background-color: hsl(0, 0%, 15%);
   }
 }
